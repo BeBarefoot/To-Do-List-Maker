@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,4 +70,77 @@
 <script src="js/util-service.js"></script>
 <script src="js/todo-service.js"></script>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Just DO it</title>
+</head>
+
+<body onload="init()">
+    <header class="header">
+        <h1>Just Do It </h1>
+        <h3>Or Don't, Its Easier</h3>
+    </header>
+
+    <section class="list-section">
+
+        <button class="btn btn-secondary" value="all" onclick="onSetFilter(this.value)">All</button>
+        <button class="btn btn-secondary" value="active" onclick="onSetFilter(this.value)">To Do</button>
+        <button class="btn btn-secondary" value="done" onclick="onSetFilter(this.value)">Done?!</button>
+
+
+        <section class="sort-section">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Sort By:
+                        </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="select-filter">
+                    <a class="dropdown-item" value="1" onclick="sortBy(this)">Date</a>
+                    <a class="dropdown-item" value="2" onclick="sortBy(this)">Importance</a>
+                    <a class="dropdown-item" value="3" onclick="sortBy(this)">Name</a>
+                </div>
+            </div>
+
+            <div class="no-tasks">
+                <h2>There Are No Tasks! You Are LAZY!!</h2>
+            </div>
+
+            <ul class="todo-list">
+            </ul>
+        </section>
+    </section>
+
+    <section class="stats">
+        <h4>
+            Todos:
+            <span class="todo-count"></span> Active:
+            <span class="active-count"></span>
+        </h4>
+    </section>
+
+    <section class="add-todos">
+        <input id="newTodoTxt" type="text" placeholder="What do you want?!" onkeyup="checkIfEnter(event)">
+        <select class="importance">
+                <option value="1">Not Importent</option>
+                <option value="2">Important</option>
+                <option value="3">URGANT!</option>
+            </select>
+        <button onclick="todoAdd()">Add</button>
+    </section>
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/util-service.js"></script>
+<script src="js/todo-service.js"></script>
+
+>>>>>>> 1148c09e0d7bf55906729beb5a9c901eea7450ff
 </html>
